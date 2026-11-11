@@ -80,3 +80,32 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
 }
+
+/* Fila del carrusel */
+.carrusel-items {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+/* Forzar que el enlace no rompa el contenedor */
+.carrusel-items a {
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Forzar el tamaño exacto de la miniatura dentro del carrusel */
+.carrusel-items a img {
+    width: 400px !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    border-radius: 6px;
+    border: 1px solid #333;
+    display: block;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.carrusel-items a img:hover {
+    border-color: #00bcd4;
+    transform: scale(1.01);
+}
